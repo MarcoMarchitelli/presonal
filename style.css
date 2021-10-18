@@ -1,1 +1,57 @@
+@font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
 
+:root {
+	--bgCol:rgb(240, 225, 200);
+	--textCol:rgb(50, 50, 50);
+	--btnCol:rgb(240, 200, 200);
+}
+
+html {
+	color: var(--textCol);
+	font-family: fulbo-argenta;
+	font-size: 16px;
+	text-align: center;
+
+	width: 50%;
+	margin: auto;
+
+	background-color: var(--bgCol);
+}
+
+/*overrides*/
+	a{
+		color: var(--textCol);
+		text-decoration: none;
+	}
+
+/*classes*/
+	.button {
+		width: 25%;
+		height: 4em;
+		margin: auto;
+		background-color: var(--btnCol) ;
+		border-radius: 1em;
+
+		transition: transform .2s;
+	}
+
+	.button:hover {
+		transform: scale(1.1);
+	}
+
+	.button:active {
+		transform: scale(.9);
+	}
+
+	.buttonText {
+		text-align: center;
+		font-size: 3em;
+	}
+
+	.title {
+		font-size: 6em;
+	}
+
+	.subtitle {
+		font-size: 2em;
+	}
