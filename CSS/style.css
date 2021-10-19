@@ -1,9 +1,9 @@
 @font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
 
 :root {
-	--bgCol:rgb(255, 219, 184);
-	--textCol:rgb(50, 50, 50);
-	--btnCol:rgb(235, 96, 96);
+	--bgCol:#FFE8E8;
+	--textCol:#3A3A3A;
+	--btnCol:#A3EDFF;
 }
 
 html {
