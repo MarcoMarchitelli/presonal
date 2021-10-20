@@ -34,20 +34,6 @@ body {
 		margin-top: 18em;
 	}
 
-	.bButton:hover {
-		animation-name: aOverlayIn;
-		animation-duration: .2s;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-	}
-
-	.bButton:not(:hover) {
-		animation-name: aOverlayOut;
-		animation-duration: .2s;
-		animation-iteration-count: 1;
-		animation-direction: forwards;
-	}
-
 	.sButton:hover {
 		animation-name: bOverlayIn;
 		animation-duration: .2s;
@@ -73,7 +59,7 @@ body {
 		margin: auto;
 		cursor: pointer;
 
-		transform: translate(43.5%,-5%);
+		transform: translate(3%,-5%);
 	}
 
 	.titleUnderlay {
@@ -147,16 +133,6 @@ body {
 	}
 
 /*animations*/
-	@keyframes aOverlayIn {
-		from {transform: translate(43.5%,-5%);}
-		to {transform: translate(41.9%,0);}
-	}
-
-	@keyframes aOverlayOut {
-		from {transform: translate(41.9%,0);}
-		to {transform: translate(43.5%,-5%);}
-	}
-
 	@keyframes bOverlayIn {
 		from {transform: translate(3%,-5%);}
 		to {transform: translate(0%,0%);}
