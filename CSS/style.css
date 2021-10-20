@@ -50,13 +50,8 @@ body {
 
 	.titleText {
 		color: var(--mPink);
-		font-size: 8em;
-
+		font-size: 5em;
 		position: absolute;
-		height: 150px;
-		width: fit-content;
-
-		margin: auto;
 		cursor: pointer;
 
 		transform: translate(3%,-5%);
@@ -64,15 +59,12 @@ body {
 
 	.titleUnderlay {
 		color: var(--mDarkPink);
-		font-size: 8em;
-		height: 150px;
-		width: fit-content;
-		margin: auto;
+		font-size: 5em;
 		cursor: pointer;
 	}
 
 	.subtitleText {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	.stuffText {
