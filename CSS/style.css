@@ -21,14 +21,6 @@ body {
 }
 
 /*overrides*/
-	a {
-		color: var(--mDarkGrey);
-		text-decoration: none;
-	}
-
-	div {
-		display: block;
-	}
 
 /*classes*/
 	.mainBlock {
@@ -42,15 +34,29 @@ body {
 		margin-top: 18em;
 	}
 
-	.textOverlayButton:hover {
+	.bButton:hover {
 		animation-name: aOverlayIn;
 		animation-duration: .2s;
 		animation-iteration-count: 1;
 		animation-fill-mode: forwards;
 	}
 
-	.textOverlayButton:not(:hover) {
+	.bButton:not(:hover) {
 		animation-name: aOverlayOut;
+		animation-duration: .2s;
+		animation-iteration-count: 1;
+		animation-direction: forwards;
+	}
+
+	.sButton:hover {
+		animation-name: bOverlayIn;
+		animation-duration: .2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	.sButton:not(:hover) {
+		animation-name: bOverlayOut;
 		animation-duration: .2s;
 		animation-iteration-count: 1;
 		animation-direction: forwards;
@@ -69,8 +75,6 @@ body {
 
 		transform: translate(43.5%,-5%);
 	}
-
-
 
 	.titleUnderlay {
 		color: var(--mDarkPink);
@@ -91,7 +95,7 @@ body {
 		font-size: 3em;
 		cursor: pointer;
 		
-		transform: translate(43.5%,-5%);
+		transform: translate(3%,-5%);
 	}
 
 	.stuffUnderlay {
@@ -100,12 +104,19 @@ body {
 		cursor: pointer;
 	}
 
-	.toolsButton {
+	.toolsText {
 		color: var(--mOrange);
-		text-shadow: -3px 3px var(--mDarkOrange);
+		position: absolute;
 		font-size: 3em;
 		cursor: pointer;
-		transform: translate(0,0);
+		
+		transform: translate(3%,-5%);
+	}
+
+	.toolsUnderlay {
+		color: var(--mDarkOrange);
+		font-size: 3em;
+		cursor: pointer;
 	}
 
 	.socialBotLine {
@@ -144,4 +155,14 @@ body {
 	@keyframes aOverlayOut {
 		from {transform: translate(41.9%,0);}
 		to {transform: translate(43.5%,-5%);}
+	}
+
+	@keyframes bOverlayIn {
+		from {transform: translate(3%,-5%);}
+		to {transform: translate(0%,0%);}
+	}
+
+	@keyframes bOverlayOut {
+		from {transform: translate(0%,0%);}
+		to {transform: translate(3%,-5%);}
 	}
