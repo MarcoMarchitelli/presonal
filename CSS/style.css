@@ -1,59 +1,137 @@
 @font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
 
-:root {
-	--bgCol:#FFE8E8;
-	--textCol:#3A3A3A;
-	--btnCol:#A3EDFF;
+:root{
+	--mDarkGrey: #3A3A3A;
+	--mPink: #FFE8E8;
+	--mDarkPink: #ffcaca;
+	--mTeal: #A3EDFF;
+	--mDarkTeal: #AEB2FF;
+	--mGreen: #99FFE2;
+	--mDarkGreen: #66E571;
+	--mOrange: #FFDDA3;
+	--mDarkOrange: #FFB1C5;
 }
 
-html {
-	color: var(--textCol);
-	font-family: fulbo-argenta;
+body {
+	background-color: var(--mTeal);
+
+	color: var(--mDarkGrey);
+	font-family: fulbo-argenta, sans-serif;
 	font-size: 1em;
-	text-align: center;
-
-	width: fit-content;
-	height: fit-content;
-	margin: auto;
-
-	background-color: var(--bgCol);
 }
 
 /*overrides*/
-	a{
-		color: var(--textCol);
+	a {
+		color: var(--mDarkGrey);
 		text-decoration: none;
 	}
 
-/*classes*/
-	.button {
-		background-color: var(--btnCol) ;
-		font-size: 2.5em;
-		
-		padding: .25em;
-		border-radius: 1.5em;
+	div {
+		display: block;
+	}
 
+/*classes*/
+	.mainBlock {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 800px;
+	}
+
+	.titleBlock {
+		margin-top: 18em;
+	}
+
+	.textOverlayButton:hover {
+		animation-name: aOverlayIn;
+		animation-duration: .2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	.textOverlayButton:not(:hover) {
+		animation-name: aOverlayOut;
+		animation-duration: .2s;
+		animation-iteration-count: 1;
+		animation-direction: forwards;
+	}
+
+	.titleText {
+		color: var(--mPink);
+		font-size: 8em;
+
+		position: absolute;
+		height: 150px;
 		width: fit-content;
 
-		transition: transform .2s ease-out, border-radius .2s ease-out;
+		margin: auto;
+		cursor: pointer;
+
+		transform: translate(43.5%,-5%);
 	}
 
-	.button:hover {
-		transform: scale(1.1);
-		border-radius: 1em;
+	@keyframes aOverlayIn {
+		from {transform: translate(43.5%,-5%);}
+		to {transform: translate(41.9%,0);}
 	}
 
-	.button:active {
-		transform: scale(.9);
-		border-radius: 2em;
+	@keyframes aOverlayOut {
+		from {transform: translate(41.9%,0);}
+		to {transform: translate(43.5%,-5%);}
 	}
 
-	.title {
-		height: fit-content;
-		font-size: 6em;
+	.titleUnderlay {
+		color: var(--mDarkPink);
+		font-size: 8em;
+		height: 150px;
+		width: fit-content;
+		margin: auto;
+		cursor: pointer;
 	}
 
-	.subtitle {
+	.subtitleText {
 		font-size: 2em;
-		float: top;
+	}
+
+	.stuffButton {
+		color: var(--mGreen);
+		text-shadow: -3px 3px var(--mDarkGreen);
+		font-size: 3em;
+		cursor: pointer;
+		transform: translate(0,0);
+	}
+
+	.toolsButton {
+		color: var(--mOrange);
+		text-shadow: -3px 3px var(--mDarkOrange);
+		font-size: 3em;
+		cursor: pointer;
+		transform: translate(0,0);
+	}
+
+	.socialBotLine {
+		background-color: var(--mPink);
+
+		height: 3em;
+
+		position: fixed;
+		bottom: -1em;
+		left: 50%;
+
+		transform: translate(-50%,0);
+
+		padding: 1em;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		box-shadow: -6px 6px 2px var(--mDarkPink);
+	}
+
+	.socialContainer {
+		display: inline-block;
+	}
+
+	.logoLinkImg {	
+		height: 32px;
+		width: 32px;
+		filter: drop-shadow(-3px 3px var(--mDarkGrey));
 	}
