@@ -70,15 +70,7 @@ body {
 		transform: translate(43.5%,-5%);
 	}
 
-	@keyframes aOverlayIn {
-		from {transform: translate(43.5%,-5%);}
-		to {transform: translate(41.9%,0);}
-	}
 
-	@keyframes aOverlayOut {
-		from {transform: translate(41.9%,0);}
-		to {transform: translate(43.5%,-5%);}
-	}
 
 	.titleUnderlay {
 		color: var(--mDarkPink);
@@ -93,12 +85,19 @@ body {
 		font-size: 2em;
 	}
 
-	.stuffButton {
+	.stuffText {
 		color: var(--mGreen);
-		text-shadow: -3px 3px var(--mDarkGreen);
+		position: absolute;
 		font-size: 3em;
 		cursor: pointer;
-		transform: translate(0,0);
+		
+		transform: translate(43.5%,-5%);
+	}
+
+	.stuffUnderlay {
+		color: var(--mDarkGreen);
+		font-size: 3em;
+		cursor: pointer;
 	}
 
 	.toolsButton {
@@ -134,4 +133,15 @@ body {
 		height: 32px;
 		width: 32px;
 		filter: drop-shadow(-3px 3px var(--mDarkGrey));
+	}
+
+/*animations*/
+	@keyframes aOverlayIn {
+		from {transform: translate(43.5%,-5%);}
+		to {transform: translate(41.9%,0);}
+	}
+
+	@keyframes aOverlayOut {
+		from {transform: translate(41.9%,0);}
+		to {transform: translate(43.5%,-5%);}
 	}
