@@ -1,0 +1,23 @@
+.tPink{
+    color: var(--mPink);
+}
+
+.tDarkPink{
+    color: var(--mDarkPink);
+}
+
+.tOrange{
+    color: var(--mOrange);
+}
+
+.tDarkOrange{
+    color: var(--mDarkOrange);
+}
+
+.tGreen{
+    color: var(--mGreen);
+}
+
+.tDarkGreen{
+    color: var(--mDarkGreen);
+}

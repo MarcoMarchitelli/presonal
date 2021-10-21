@@ -8,34 +8,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Deirin</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="Resources/anime/anime.min.js"></script>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
 </head>
 
 <body>
     <div class="mainBlock">
         <div class="titleBlock">
-            <div onmouseover="test">
-                <span class="titleText ">
+            <div id = "deirinButton">
+                <span class="buttonText tPink tSize5 sButton" id="deirinText">
                     Deirin
                 </span>
-                <span class="titleUnderlay">
+                <span class="buttonUnderlay tDarkPink tSize5" id="deirinUnderlay">
                     Deirin
                 </span>
             </div>
             <div class="inline">
-                <span class="subtitleText">making</span>
+                <span class="tSize1-5">making</span>
                 <span>
-                    <span class="stuffText ">stuff</span>
-                    <span class="stuffUnderlay">stuff</span>
+                    <span class="buttonText tGreen tSize3 sButton">stuff</span>
+                    <span class="buttonUnderlay tDarkGreen tSize3">stuff</span>
                 </span>
-                <span class="subtitleText">with modern</span>
+                <span class="tSize1-5">with modern</span>
                 <span>
-                    <span class="toolsText ">tools</span>
-                    <span class="toolsUnderlay">tools</span>
+                    <span class="buttonText tOrange tSize3 sButton">tools</span>
+                    <span class="buttonUnderlay tDarkOrange tSize3">tools</span>
                 </span>
             </div>        
         </div>
+
+
+        <div>
+            <div class="accordion">
+                <span class="buttonText tGreen tSize3 sButton">
+                    Games
+                </span>
+                <span class="buttonUnderlay tDarkGreen tSize3">
+                    Games
+                </span>
+            </div>
+            <div class="accordionElem">
+                <div class="game">
+                    game 1
+                </div>
+                <div class="game">
+                    game 1
+                </div>
+                <div class="game">
+                    game 1
+                </div>
+                <div class="game">
+                    game 1
+                </div>
+            </div>
+        </div>
+
+
         <div class="socialBotLine">
             <div class="socialContainer">
                 <a href="https://twitter.com/_Deirin" alt="Twitter">
@@ -54,6 +81,7 @@
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

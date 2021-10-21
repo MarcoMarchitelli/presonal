@@ -1,3 +1,5 @@
+@import url("cColors.css");
+@import url("cSize.css");
 @font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
 
 :root{
@@ -48,52 +50,16 @@ body {
 		animation-direction: forwards;
 	}
 
-	.titleText {
-		color: var(--mPink);
-		font-size: 5em;
+	.buttonText {
 		position: absolute;
 		cursor: pointer;
+		user-select: none;
 
 		transform: translate(3%,-5%);
 	}
 
-	.titleUnderlay {
-		color: var(--mDarkPink);
-		font-size: 5em;
-		cursor: pointer;
-	}
-
-	.subtitleText {
-		font-size: 1.5em;
-	}
-
-	.stuffText {
-		color: var(--mGreen);
-		position: absolute;
-		font-size: 3em;
-		cursor: pointer;
-		
-		transform: translate(3%,-5%);
-	}
-
-	.stuffUnderlay {
-		color: var(--mDarkGreen);
-		font-size: 3em;
-		cursor: pointer;
-	}
-
-	.toolsText {
-		color: var(--mOrange);
-		position: absolute;
-		font-size: 3em;
-		cursor: pointer;
-		
-		transform: translate(3%,-5%);
-	}
-
-	.toolsUnderlay {
-		color: var(--mDarkOrange);
-		font-size: 3em;
+	.buttonUnderlay {
+		user-select: none;
 		cursor: pointer;
 	}
 
@@ -122,6 +88,17 @@ body {
 		height: 32px;
 		width: 32px;
 		filter: drop-shadow(-3px 3px var(--mDarkGrey));
+	}
+
+	.accordion {
+		transition: 1s;
+	}
+
+	.accordionElem {
+		padding: 0 18px;
+  		max-height: 0;
+  		overflow: hidden;
+  		transition: max-height 0.2s ease-out;
 	}
 
 /*animations*/

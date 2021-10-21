@@ -1,20 +1,40 @@
- 
- /*vars*/
- const deirinButton = document.getElementById("deirinButton");
- const deirinText = document.getElementById("deirinText");
- const deirinUnderlay = document.getElementById("deirinUnderlay");
+//vars
+{
+}
 
- /*events*/
- deirinButton.addEventListener("mouseenter");
- deirinButton.addEventListener("mouseleave", DeirinMouseEnter);
- deirinButton.addEventListener("mousedown", aOverlay_Down);
+window.onload = LoadHandler;
 
- function test(){
-    anime({
-        targets: '.titleText',
-        translateX: -35,
-        translateY: 50,
-        diration: 1000,
-        easing: 'easeOut'
-     });
- }
+function LoadHandler() {
+    AccordionSetup();
+}
+
+//anims
+{
+    function test() {
+        anime.remove('.titleText');
+        anime({
+            targets: '.titleText',
+            translateX: targetXPos,
+            translateY: targetYPos,
+            diration: 1000,
+            eased: 'linear'
+        });
+    }
+}
+
+function AccordionSetup() {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+}
