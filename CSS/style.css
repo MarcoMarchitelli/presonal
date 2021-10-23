@@ -32,8 +32,28 @@ body {
 		max-width: 800px;
 	}
 
-	.titleBlock {
+	#titleBlock {
 		margin-top: 18em;
+	}
+
+	.bButton {
+		display: inline-block;
+		width: fit-content;
+		margin: auto;
+	}
+
+	.bButton:active {
+		animation-name: bMouseDown;
+		animation-duration: .2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	.bButton:not(:active) {
+		animation-name: bMouseUp;
+		animation-duration: .2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
 	}
 
 	.sButton:hover {
@@ -47,7 +67,6 @@ body {
 		animation-name: bOverlayOut;
 		animation-duration: .2s;
 		animation-iteration-count: 1;
-		animation-direction: forwards;
 	}
 
 	.buttonText {
@@ -87,7 +106,7 @@ body {
 	.logoLinkImg {	
 		height: 32px;
 		width: 32px;
-		filter: drop-shadow(-3px 3px var(--mDarkGrey));
+		filter: drop-shadow(-3px 3px 1px var(--mDarkGrey));
 	}
 
 	.accordion {
@@ -110,4 +129,14 @@ body {
 	@keyframes bOverlayOut {
 		from {transform: translate(0%,0%);}
 		to {transform: translate(3%,-5%);}
+	}
+
+	@keyframes bMouseDown {
+		from {transform: scale(1);}
+		to {transform: scale(.9);}
+	}
+
+	@keyframes bMouseUp {
+		from {transform: scale(.9);}
+		to {transform: scale(1);}
 	}

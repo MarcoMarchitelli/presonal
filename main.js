@@ -1,25 +1,24 @@
 //vars
-{
-}
+let stuffClicked = false;
 
+let stuffButton;
+
+//anims
+var aTitleBlockUp = anime({
+    targets: '#titleBlock',
+    marginTop: ['18em', '2em'],
+    duration: 500,
+    autoplay: false,
+    easing: 'easeInQuad'
+});
+
+
+//code
 window.onload = LoadHandler;
 
 function LoadHandler() {
+    InitVars();
     AccordionSetup();
-}
-
-//anims
-{
-    function test() {
-        anime.remove('.titleText');
-        anime({
-            targets: '.titleText',
-            translateX: targetXPos,
-            translateY: targetYPos,
-            diration: 1000,
-            eased: 'linear'
-        });
-    }
 }
 
 function AccordionSetup() {
@@ -36,5 +35,17 @@ function AccordionSetup() {
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
+    }
+}
+
+function InitVars() {
+    stuffButton = document.getElementById("stuffButton");
+    stuffButton.addEventListener("click", StuffMouseUp);
+}
+
+function StuffMouseUp() {
+    if (stuffClicked == false) {
+        aTitleBlockUp.restart();
+        stuffClicked = true;
     }
 }
