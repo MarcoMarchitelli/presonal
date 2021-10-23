@@ -35,12 +35,13 @@ body {
 	}
 
 	#titleBlock {
-		margin-top: 10em;
+		margin-top: 2em;
+		opacity: 0;
 	}
 
 	#stuffList {
 		position: fixed;
-		top: 15em;
+		top: 13em;
 		left: 50%;
 		transform: translateX(-50%);
 	}

@@ -8,7 +8,15 @@ let shadersButton;
 //anims
 var aTitleBlockUp = anime({
     targets: '#titleBlock',
-    marginTop: ['10em', '2em'],
+    marginTop: ['2em', '2em'],
+    duration: 500,
+    autoplay: false,
+    easing: 'easeOutQuad'
+});
+
+var aTitleBlockShow = anime ({
+    targets: '#titleBlock',
+    opacity: '1',
     duration: 500,
     autoplay: false,
     easing: 'easeOutQuad'
@@ -37,6 +45,7 @@ window.onload = LoadHandler;
 function LoadHandler() {
     InitVars();
     AccordionSetup();
+    aTitleBlockShow.restart();
 }
 
 function AccordionSetup() {
