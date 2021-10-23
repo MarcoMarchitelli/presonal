@@ -1,14 +1,31 @@
 //vars
 let stuffClicked = false;
-
 let stuffButton;
-let games;
+let stuffList;
+let gamesButton;
+let shadersButton;
 
 //anims
 var aTitleBlockUp = anime({
     targets: '#titleBlock',
     marginTop: ['10em', '2em'],
-    duration: 300,
+    duration: 500,
+    autoplay: false,
+    easing: 'easeOutQuad'
+});
+
+var aStuffListShow = anime ({
+    targets: '#stuffList',
+    opacity: '1',
+    duration: 500,
+    autoplay: false,
+    easing: 'easeOutQuad'
+});
+
+var aGamesListShow = anime ({
+    targets: '#gamesList',
+    opacity: '1',
+    duration: 500,
     autoplay: false,
     easing: 'easeOutQuad'
 });
@@ -41,16 +58,32 @@ function AccordionSetup() {
 
 function InitVars() {
     stuffButton = document.getElementById("stuffButton");
-    stuffButton.addEventListener("click", StuffMouseUp);
-    games = document.getElementById("games");
+    stuffButton.addEventListener("click", StuffClick);
+
+    stuffList = document.getElementById("stuffList");
+
+    gamesButton = document.getElementById("gamesButton");
+    gamesButton.addEventListener("click", GamesClick);
+
+    shadersButton = document.getElementById("shadersButton");
+    shadersButton.addEventListener("click", ShadersClick);
 }
 
-function StuffMouseUp() {
+function StuffClick() {
     if (stuffClicked == false) {
         aTitleBlockUp.restart();
 
-        games.style.display = 'block';
+        stuffList.style.display = 'block';
+        aStuffListShow.restart();
 
         stuffClicked = true;
     }
+}
+
+function GamesClick() {
+    aGamesListShow.restart();
+}
+
+function ShadersClick() {
+
 }

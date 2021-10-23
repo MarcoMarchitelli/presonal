@@ -1,5 +1,6 @@
 @import url("cColors.css");
 @import url("cSize.css");
+@import url("cMargin.css");
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
 
@@ -37,12 +38,16 @@ body {
 		margin-top: 10em;
 	}
 
-	#games {
-		display: none;
+	#stuffList {
 		position: fixed;
 		top: 15em;
 		left: 50%;
 		transform: translateX(-50%);
+	}
+
+	.hidden {
+		display: none;
+		opacity: 0;
 	}
 
 	.bButton {
