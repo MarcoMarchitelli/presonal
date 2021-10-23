@@ -1,5 +1,6 @@
 @import url("cColors.css");
 @import url("cSize.css");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
 
 :root{
@@ -18,8 +19,8 @@ body {
 	background-color: var(--mTeal);
 
 	color: var(--mDarkGrey);
-	font-family: fulbo-argenta, sans-serif;
-	font-size: 1em;
+	font-family: 'Fredoka One', fulbo-argenta, Verdana, sans-serif;
+	font-size: 24px;
 }
 
 /*overrides*/
@@ -33,7 +34,15 @@ body {
 	}
 
 	#titleBlock {
-		margin-top: 18em;
+		margin-top: 10em;
+	}
+
+	#games {
+		display: none;
+		position: fixed;
+		top: 15em;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.bButton {
@@ -85,7 +94,7 @@ body {
 	.socialBotLine {
 		background-color: var(--mPink);
 
-		height: 3em;
+		height: 2em;
 
 		position: fixed;
 		bottom: -1em;

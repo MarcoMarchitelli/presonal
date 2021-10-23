@@ -2,14 +2,15 @@
 let stuffClicked = false;
 
 let stuffButton;
+let games;
 
 //anims
 var aTitleBlockUp = anime({
     targets: '#titleBlock',
-    marginTop: ['18em', '2em'],
-    duration: 500,
+    marginTop: ['10em', '2em'],
+    duration: 300,
     autoplay: false,
-    easing: 'easeInQuad'
+    easing: 'easeOutQuad'
 });
 
 
@@ -41,11 +42,15 @@ function AccordionSetup() {
 function InitVars() {
     stuffButton = document.getElementById("stuffButton");
     stuffButton.addEventListener("click", StuffMouseUp);
+    games = document.getElementById("games");
 }
 
 function StuffMouseUp() {
     if (stuffClicked == false) {
         aTitleBlockUp.restart();
+
+        games.style.display = 'block';
+
         stuffClicked = true;
     }
 }
