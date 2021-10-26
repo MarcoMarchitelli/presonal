@@ -1,5 +1,5 @@
 @import url("cColors.css");
-@import url("cSize.css");
+@import url("cText.css");
 @import url("cMargin.css");
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
@@ -14,6 +14,7 @@
 	--mDarkGreen: #66E571;
 	--mOrange: #FFDDA3;
 	--mDarkOrange: #FFB1C5;
+	--mSiteWidth: 800px;
 }
 
 body {
@@ -27,11 +28,11 @@ body {
 /*overrides*/
 
 /*classes*/
-	.mainBlock {
+	#mainBlock {
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 800px;
+		max-width: var(--mSiteWidth);
 	}
 
 	#titleBlock {
@@ -43,7 +44,20 @@ body {
 		position: fixed;
 		top: 13em;
 		left: 50%;
+		width: var(--mSiteWidth);
 		transform: translateX(-50%);
+	}
+
+	.left {
+		margin-left: 0;
+		margin-right: auto;
+		width: fit-content;
+	}
+
+	.right {
+		margin-right: 0;
+		margin-left: auto;
+		width: fit-content;
 	}
 
 	.hidden {

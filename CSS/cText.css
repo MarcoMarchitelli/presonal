@@ -9,3 +9,11 @@
 .tSize1-5 {
     font-size: 1.5em;
 }
+
+.tSize-5 {
+    font-size: .5em;
+}
+
+.tAllign-Left {
+    text-align: left;
+}
