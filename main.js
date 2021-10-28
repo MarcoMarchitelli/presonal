@@ -3,6 +3,7 @@ let stuffClicked = false;
 let stuffButton;
 let stuffList;
 let gamesButton;
+let gamesButtonClicked = false;
 let shadersButton;
 
 //anims
@@ -14,7 +15,7 @@ var aTitleBlockUp = anime({
     easing: 'easeOutQuad'
 });
 
-var aTitleBlockShow = anime ({
+var aTitleBlockShow = anime({
     targets: '#titleBlock',
     opacity: '1',
     duration: 500,
@@ -22,7 +23,7 @@ var aTitleBlockShow = anime ({
     easing: 'easeOutQuad'
 });
 
-var aStuffListShow = anime ({
+var aStuffListShow = anime({
     targets: '#stuffList',
     opacity: '1',
     duration: 500,
@@ -30,9 +31,19 @@ var aStuffListShow = anime ({
     easing: 'easeOutQuad'
 });
 
-var aGamesListShow = anime ({
+var aGamesListShow = anime({
     targets: '#gamesList',
     opacity: '1',
+    maxHeight: '300px',
+    duration: 500,
+    autoplay: false,
+    easing: 'easeOutQuad'
+});
+
+var aGamesListHide = anime({
+    targets: '#gamesList',
+    opacity: ['1', '0'],
+    maxHeight: '0',
     duration: 500,
     autoplay: false,
     easing: 'easeOutQuad'
@@ -90,7 +101,14 @@ function StuffClick() {
 }
 
 function GamesClick() {
-    aGamesListShow.restart();
+    if (gamesButtonClicked == false) {
+        aGamesListShow.restart();
+        gamesButtonClicked = true;
+    }
+    else {
+        aGamesListHide.restart();
+        gamesButtonClicked = false;
+    }
 }
 
 function ShadersClick() {

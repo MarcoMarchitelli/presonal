@@ -48,6 +48,11 @@ body {
 		transform: translateX(-50%);
 	}
 
+	#gamesList {
+		opacity: 0;
+		max-height: 0;
+	}
+
 	.left {
 		margin-left: 0;
 		margin-right: auto;
@@ -146,7 +151,7 @@ body {
 		padding: 0 18px;
   		max-height: 0;
   		overflow: hidden;
-  		transition: max-height 0.2s ease-out;
+  		transition: max-height 0.5s ease-out;
 	}
 
 /*animations*/
