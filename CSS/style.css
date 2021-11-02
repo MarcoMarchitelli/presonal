@@ -53,6 +53,19 @@ body {
 		max-height: 0;
 	}
 
+	#itWasDesert {
+		margin-left: 20px;
+		float: right;
+
+		background-color: var(--mPink);
+		padding: 10px;
+		border-radius: 15px;
+		box-shadow: var(--mDarkPink) -3px 3px 2px;
+
+		color: var(--mTeal);
+		text-shadow: var(--mDarkGrey) -2px 2px 1px;
+	}
+
 	.left {
 		margin-left: 0;
 		margin-right: auto;
