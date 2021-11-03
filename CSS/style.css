@@ -1,7 +1,7 @@
 @import url("cColors.css");
 @import url("cText.css");
 @import url("cMargin.css");
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 @font-face { font-family: fulbo-argenta; src: url('fonts/fulbo-argenta.otf'); }
 
 :root{
@@ -57,8 +57,7 @@ body {
 		margin-left: 20px;
 
 		background-color: var(--mPink);
-		padding-top: 10px;
-		padding-bottom: 10px;
+		min-height: 130px;
 		padding-left: 50px;
 		padding-right: 50px;
 		border-radius: 15px;
@@ -67,6 +66,25 @@ body {
 		letter-spacing: 5px;
 		color: var(--mTeal);
 		text-shadow: var(--mDarkGrey) -2px 2px 1px;
+
+		user-select: none;
+	}
+
+	#doog {
+		border-radius: 15px;
+		box-shadow: var(--mDarkGrey) -3px 3px 2px;
+	}
+	
+	.flexLeft {
+		display: flex;
+		justify-content: flex-start;
+        align-items: center;
+	}
+
+	.flexRight {
+		display: flex;
+		justify-content: flex-end;
+        align-items: center;
 	}
 
 	.dInlineBlock {
@@ -91,8 +109,6 @@ body {
 	}
 
 	.centerVertical {
-		position: static;
-		margin: 0;
 		top: 50%;
 		transform: translate(0,-50%);
 	}

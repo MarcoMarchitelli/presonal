@@ -10,10 +10,16 @@
     font-size: 1.5em;
 }
 
-.tSize-4 {
-    font-size: .4em;
+.tSize-6 {
+    font-size: .6em;
 }
 
 .tAllign-Left {
     text-align: left;
+}
+
+.tNormalFont {
+    font-family: 'Zen Maru Gothic', fulbo-argenta, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 500;
 }

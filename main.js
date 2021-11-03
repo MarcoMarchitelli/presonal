@@ -34,7 +34,7 @@ var aStuffListShow = anime({
 var aGamesListShow = anime({
     targets: '#gamesList',
     opacity: '1',
-    maxHeight: '300px',
+    maxHeight: '500px',
     duration: 500,
     autoplay: false,
     easing: 'easeOutQuad'
