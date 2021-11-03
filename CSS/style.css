@@ -55,15 +55,22 @@ body {
 
 	#itWasDesert {
 		margin-left: 20px;
-		float: right;
 
 		background-color: var(--mPink);
-		padding: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 50px;
+		padding-right: 50px;
 		border-radius: 15px;
 		box-shadow: var(--mDarkPink) -3px 3px 2px;
 
+		letter-spacing: 5px;
 		color: var(--mTeal);
 		text-shadow: var(--mDarkGrey) -2px 2px 1px;
+	}
+
+	.dInlineBlock {
+		display: inline-block;
 	}
 
 	.left {
@@ -81,6 +88,21 @@ body {
 	.hidden {
 		display: none;
 		opacity: 0;
+	}
+
+	.centerVertical {
+		position: static;
+		margin: 0;
+		top: 50%;
+		transform: translate(0,-50%);
+	}
+
+	.floatLeft {
+		float: left;
+	}
+
+	.floatRight {
+		float: right;
 	}
 
 	.bButton {
@@ -150,10 +172,10 @@ body {
 		display: inline-block;
 	}
 
-	.logoLinkImg {	
+	.logoLinkImg {
 		height: 32px;
 		width: 32px;
-		filter: drop-shadow(-3px 3px 1px var(--mDarkGrey));
+		filter: drop-shadow(-3px 3px var(--mDarkPink));
 	}
 
 	.accordion {
