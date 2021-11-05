@@ -68,7 +68,10 @@ body {
 .grid {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 25px 0px;
+    margin: auto;
+    max-width: 90%;
+    row-gap: 25px;
+    column-gap: -20px;
 }
 
 .icon {
@@ -84,6 +87,15 @@ body {
 
 .link {
     color: var(--linkCol);
+}
+
+.categoryTextUnderlay {
+    width: 0;
+    height: 2px;
+    margin: auto;
+    background-color: var(--textCol);
+    border-radius: 15px;
+    opacity: 0;
 }
 
 .categoryText:hover {
@@ -131,15 +143,7 @@ body {
 }
 
 @keyframes cBtnDown {
-    from {transform: scale(1);}
-    to {transform: scale(.9);}
 }
 
 @keyframes cBtnUp {
-    from {
-        transform: scale(.9);
-    }
-    to {
-        transform: scale(1);
-    }
 }
