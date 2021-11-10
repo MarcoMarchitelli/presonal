@@ -6,80 +6,123 @@
     --linkCol: #e88000;
 }
 
-body {
-	background-color: var(--bgCol);
+/*ids*/
+    #titleLine {
+        background-color: var(--textCol);
+        border-radius: 25px; 
+        height: 2px; 
+        max-width: 250px;
+        margin: auto; 
+        margin-top: 15px;
+    }
 
-	color: var(--textCol);
-    
-	font-family: 'Zen Maru Gothic', Verdana, sans-serif;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
+/*overrides*/
+    body {
+        background-color: var(--bgCol);
 
-#titleLine {
-    background-color: var(--textCol);
-    border-radius: 25px; 
-    height: 2px; 
-    max-width: 250px;
-    margin: auto; 
-    margin-top: 15px;
-}
+        color: var(--textCol);
+        
+        font-family: 'Zen Maru Gothic', Verdana, sans-serif;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+    }
 
-.positionAbsolute {
-    position: absolute;
-}
+    .header {
+        font-size: 70px; 
+        margin-top: 50px; 
+        letter-spacing: 10px;
+    }
 
-.displayNone {
-    display: none;
-}
+/*generic*/
+    .displayNone {
+        display: none;
+    }
 
-.opacity0 {
-    opacity: 0;
-}
+    .opacity0 {
+        opacity: 0;
+    }
 
-.header {
-    font-size: 70px; 
-    margin-top: 100px; 
-    letter-spacing: 10px;
-}
+    .flexCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 
-.flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: auto;
+        max-width: 90%;
+        row-gap: 25px;
+        column-gap: -20px;
+    }
 
-.gridItem {
-    display: inline-grid;
-    width: fit-content;
-    margin: auto;
-}
+    .gridItem {
+        display: inline-grid;
+        width: fit-content;
+        margin: auto;
+    }
 
-.projImage {
-    margin: auto;
-    border-radius: 15px;
-}
+/*project*/
+    .projImage {
+        margin: auto;
+        border-radius: 15px;
+    }
 
-.projDescription {
-    font-size: medium;
-}
+    .projDescription {
+        font-size: medium;
+    }
 
-.projTitle {
-    font-size: large;
-    font-weight: bold;
-    color: var(--linkCol);
-}
+    .projTitle {
+        font-size: large;
+        font-weight: bold;
+        color: var(--linkCol);
+    }
 
-.grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: auto;
-    max-width: 90%;
-    row-gap: 25px;
-    column-gap: -20px;
-}
+    .link {
+        text-decoration: none;
+        color: var(--linkCol);
+        font-weight: bold;
+    }
+
+    .linkUnderlay {
+        width: 0;
+        height: 2px;
+        margin: auto;
+        background-color: var(--linkCol);
+        border-radius: 15px;
+        opacity: 0;
+    }
+
+/*category*/
+    .categoryButton {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .categoryTextUnderlay {
+        width: 0;
+        height: 2px;
+        margin: auto;
+        background-color: var(--textCol);
+        border-radius: 15px;
+        opacity: 0;
+    }
+
+    .categoryText:hover {
+        animation-name: cBtnEnter;
+        animation-duration: .2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .categoryText:not(:hover) {
+        animation-name: cBtnExit;
+        animation-duration: .2s;
+        animation-iteration-count: 1;
+    }
 
 .icon {
     height: 32px;
@@ -87,70 +130,22 @@ body {
     filter: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(2881%) hue-rotate(314deg) brightness(90%) contrast(89%);
 }
 
-.categoryButton {
-    cursor: pointer;
-    user-select: none;
-}
-
-.link {
-    color: var(--linkCol);
-}
-
-.categoryTextUnderlay {
-    width: 0;
-    height: 2px;
-    margin: auto;
-    background-color: var(--textCol);
-    border-radius: 15px;
-    opacity: 0;
-}
-
-.categoryText:hover {
-    animation-name: cBtnEnter;
-    animation-duration: .2s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-
-.categoryText:not(:hover) {
-    animation-name: cBtnExit;
-    animation-duration: .2s;
-	animation-iteration-count: 1;
-}
-
-.categoryButton:active {
-    animation-name: cBtnDown;
-    animation-duration: .2s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-
-.categoryButton:not(:active) {
-    animation-name: cBtnUp;
-    animation-duration: .2s;
-	animation-iteration-count: 1;
-}
-
-@keyframes cBtnEnter {
-    from {
-        letter-spacing: 0px;
+/*animations*/
+    @keyframes cBtnEnter {
+        from {
+            letter-spacing: 0px;
+        }
+        to {
+            letter-spacing: 5px;
+        }
     }
-    to {
-        letter-spacing: 5px;
-    }
-}
 
-@keyframes cBtnExit {
-    from {
-        letter-spacing: 5px;
+    @keyframes cBtnExit {
+        from {
+            letter-spacing: 5px;
+        }
+        to {
+            letter-spacing: 0px;
+        }
     }
-    to {
-        letter-spacing: 0px;
-    }
-}
-
-@keyframes cBtnDown {
-}
-
-@keyframes cBtnUp {
-}
+/**/
