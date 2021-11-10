@@ -26,8 +26,15 @@ body {
     margin-top: 15px;
 }
 
-#gamesGrid {
-    display: hidden;
+.positionAbsolute {
+    position: absolute;
+}
+
+.displayNone {
+    display: none;
+}
+
+.opacity0 {
     opacity: 0;
 }
 
