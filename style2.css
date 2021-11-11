@@ -106,8 +106,15 @@
         width: 0;
         height: 2px;
         margin: auto;
+        bottom: -45px;
+        top: auto;
         background-color: var(--textCol);
         border-radius: 15px;
+    }
+
+    .categoryText {
+        height: 70px;
+        line-height: 70px;
     }
 
     .categoryText:hover {
