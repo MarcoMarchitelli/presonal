@@ -44,6 +44,13 @@ function InitVars() {
 }
 
 function Init() {
+    let videos = document.getElementsByClassName("mp4");
+    for (let i = 0; i < videos.length; i++) {
+        let element = videos[i];
+        element.addEventListener("mouseenter", _ => {element.play();});
+        element.addEventListener("mouseout", _ => {element.pause(); element.currentTime = "0";});
+    }
+
     lastSelectedGroup = null;
 
     let button = document.getElementById("gamesButton");
@@ -174,7 +181,7 @@ function aContentShow(target) {
         opacity: ['0', '1'],
         duration: 200,
         autoplay: true,
-        easing: 'easeOutQuad'
+        easing: 'easeInQuad'
     });
 }
 
@@ -182,7 +189,7 @@ function aContentHide(target, callback) {
     anime({
         targets: target.style,
         opacity: ['1', '0'],
-        duration: 100,
+        duration: 200,
         autoplay: true,
         easing: 'easeOutQuad',
         complete: callback
