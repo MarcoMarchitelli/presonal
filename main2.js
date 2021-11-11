@@ -90,40 +90,8 @@ function Init() {
         "click",
         _ => GroupClick(aboutGroup)
     );
-}
 
-function OldInit() {
-    games_button = document.getElementById("gamesButton");
-    games_underlay = games_button.lastElementChild;
-    games_grid = document.getElementById("gamesGrid");
-    games_button.addEventListener(
-        "click",
-        _ => CategoryClick(games_button, games_underlay, games_grid, gamesClicked
-        ));
-
-    shaders_button = document.getElementById("shadersButton");
-    shaders_underlay = shaders_button.lastElementChild;
-    shaders_grid = document.getElementById("shadersGrid");
-    shaders_button.addEventListener(
-        "click",
-        _ => CategoryClick(shaders_button, shaders_underlay, shaders_grid, shadersClicked
-        ));
-
-    tools_button = document.getElementById("toolsButton");
-    tools_underlay = tools_button.lastElementChild;
-    tools_grid = document.getElementById("toolsGrid");
-    tools_button.addEventListener(
-        "click",
-        _ => CategoryClick(tools_button, tools_underlay, tools_grid, toolsClicked
-        ));
-
-    about_button = document.getElementById("aboutButton");
-    about_underlay = about_button.lastElementChild;
-    about_grid = document.getElementById("aboutGrid");
-    about_button.addEventListener(
-        "click",
-        _ => CategoryClick(about_button, about_underlay, about_grid, aboutClicked
-        ));
+    InstantSelect(gamesGroup);
 }
 
 function GroupClick(contentGroup) {
@@ -164,10 +132,25 @@ function Select(contentGroup) {
     lastSelectedGroup = contentGroup;
 }
 
+function InstantSelect(contentGroup) {
+    contentGroup.content.style.display = "block";
+    //console.log("-"+content.id+"- display: -" + content.style.display+"-");
+
+    contentGroup.content.style.opacity = "1";
+    contentGroup.underlay.style.opacity = "1";
+    contentGroup.underlay.style.width = "100%";
+
+    //disattiva button
+    contentGroup.button.style.pointerEvents = "none";
+
+    contentGroup.selectionStatus.value = true;
+
+    lastSelectedGroup = contentGroup;
+}
+
 function aUnderlayShow(target) {
     anime({
         targets: target.style,
-        opacity: ['0', '1'],
         width: '100%',
         duration: 200,
         autoplay: true,
@@ -178,7 +161,6 @@ function aUnderlayShow(target) {
 function aUnderlayHide(target) {
     anime({
         targets: target.style,
-        opacity: ['1', '0'],
         width: '0',
         duration: 100,
         autoplay: true,

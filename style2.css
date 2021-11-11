@@ -74,8 +74,6 @@
 
     .projTitle {
         font-size: large;
-        font-weight: bold;
-        color: var(--linkCol);
     }
 
     .link {
@@ -85,12 +83,11 @@
     }
 
     .linkUnderlay {
-        width: 0;
-        height: 2px;
+        width: 50%;
+        height: 10px;
         margin: auto;
         background-color: var(--linkCol);
         border-radius: 15px;
-        opacity: 0;
     }
 
 /*category*/
@@ -105,7 +102,6 @@
         margin: auto;
         background-color: var(--textCol);
         border-radius: 15px;
-        opacity: 0;
     }
 
     .categoryText:hover {
@@ -142,6 +138,15 @@
         }
         to {
             letter-spacing: 0px;
+        }
+    }
+
+    @keyframes underlayEnter {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 100%;
         }
     }
 /**/
