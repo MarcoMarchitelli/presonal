@@ -23,15 +23,15 @@
         color: var(--textCol);
         
         font-family: 'Zen Maru Gothic', Verdana, sans-serif;
-        max-width: 800px;
+        max-width: 1200px;
         margin: auto;
         text-align: center;
     }
 
     .header {
-        font-size: 70px; 
-        margin-top: 50px; 
-        letter-spacing: 10px;
+        font-size: 50px; 
+        margin-top: 25px; 
+        letter-spacing: 5px;
     }
 
 /*generic*/
@@ -52,27 +52,24 @@
 
     .grid {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        justify-items: center;
+        align-items: start;
         margin: auto;
-        max-width: 90%;
-        row-gap: 25px;
-        column-gap: -20px;
-    }
-
-    .gridItem {
-        display: inline-grid;
-        width: fit-content;
-        margin: auto;
+        row-gap: 30px;
     }
 
 /*project*/
     .projImage {
         margin: auto;
         border-radius: 15px;
+        height: 200px;
     }
 
     .projDescription {
         font-size: medium;
+        width: 90%;
+        margin: auto;
     }
 
     .projTitle {
@@ -125,8 +122,7 @@
     }
 
 .icon {
-    height: 32px;
-    width: 32px;
+    height: 30px;
     filter: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(2881%) hue-rotate(314deg) brightness(90%) contrast(89%);
 }
 
