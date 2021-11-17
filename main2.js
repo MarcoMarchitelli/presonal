@@ -30,6 +30,9 @@ let toolsGroup;
 let aboutGroup;
 let lastSelectedGroup;
 
+let lastShowAnim;
+let lastHideAnim;
+
 class contentGroup {
     constructor(button, underlay, content) {
         this.button = button;
@@ -47,53 +50,53 @@ function Init() {
     let videos = document.getElementsByClassName("mp4");
     for (let i = 0; i < videos.length; i++) {
         let element = videos[i];
-        element.addEventListener("mouseenter", _ => {element.play();});
-        element.addEventListener("mouseout", _ => {element.pause(); element.currentTime = "0";});
+        element.addEventListener("mouseenter", _ => { element.play(); });
+        element.addEventListener("mouseout", _ => { element.pause(); element.currentTime = "0"; });
     }
 
     lastSelectedGroup = null;
 
-    let button = document.getElementById("gamesButton");
+    games_button = document.getElementById("gamesButton");
 
     gamesGroup = new contentGroup(
-        button,
-        button.lastElementChild,
+        games_button,
+        games_button.lastElementChild,
         document.getElementById("gamesGrid"),
     );
-    button.addEventListener(
+    games_button.addEventListener(
         "click",
         _ => GroupClick(gamesGroup)
     );
 
-    button = document.getElementById("shadersButton");
+    shaders_button = document.getElementById("shadersButton");
     shadersGroup = new contentGroup(
-        button,
-        button.lastElementChild,
+        shaders_button,
+        shaders_button.lastElementChild,
         document.getElementById("shadersGrid"),
     );
-    button.addEventListener(
+    shaders_button.addEventListener(
         "click",
         _ => GroupClick(shadersGroup)
     );
 
-    button = document.getElementById("toolsButton");
+    tools_button = document.getElementById("toolsButton");
     toolsGroup = new contentGroup(
-        button,
-        button.lastElementChild,
+        tools_button,
+        tools_button.lastElementChild,
         document.getElementById("toolsGrid"),
     );
-    button.addEventListener(
+    tools_button.addEventListener(
         "click",
         _ => GroupClick(toolsGroup)
     );
 
-    button = document.getElementById("aboutButton");
+    about_button = document.getElementById("aboutButton");
     aboutGroup = new contentGroup(
-        button,
-        button.lastElementChild,
+        about_button,
+        about_button.lastElementChild,
         document.getElementById("aboutGrid"),
     );
-    button.addEventListener(
+    about_button.addEventListener(
         "click",
         _ => GroupClick(aboutGroup)
     );
@@ -102,6 +105,7 @@ function Init() {
 }
 
 function GroupClick(contentGroup) {
+    ToggleButtons(false);
     if (lastSelectedGroup != null) {
         DeselectLast(_ => Select(contentGroup));
     } else {
@@ -109,12 +113,28 @@ function GroupClick(contentGroup) {
     }
 }
 
-function DeselectLast( callback ) {
+function ToggleButtons(flag) {
+    if (flag) {
+        games_button.style.pointerEvents = "auto";
+        shaders_button.style.pointerEvents = "auto";
+        tools_button.style.pointerEvents = "auto";
+        about_button.style.pointerEvents = "auto";
+    } else {
+        games_button.style.pointerEvents = "none";
+        shaders_button.style.pointerEvents = "none";
+        tools_button.style.pointerEvents = "none";
+        about_button.style.pointerEvents = "none";
+    }
+
+    lastSelectedGroup.button.style.pointerEvents = "none";
+}
+
+function DeselectLast(callback) {
     aContentHide(lastSelectedGroup.content, response);
     aUnderlayHide(lastSelectedGroup.underlay);
 
     //attiva button
-    lastSelectedGroup.button.style.pointerEvents = "auto";
+    //lastSelectedGroup.button.style.pointerEvents = "auto";
 
     lastSelectedGroup.selectionStatus.value = false;
 
@@ -128,11 +148,11 @@ function Select(contentGroup) {
     contentGroup.content.style.display = "block";
     //console.log("-"+content.id+"- display: -" + content.style.display+"-");
 
-    aContentShow(contentGroup.content);
+    aContentShow(contentGroup.content, _ => ToggleButtons(true));
     aUnderlayShow(contentGroup.underlay);
 
     //disattiva button
-    contentGroup.button.style.pointerEvents = "none";
+    //contentGroup.button.style.pointerEvents = "none";
 
     contentGroup.selectionStatus.value = true;
 
@@ -175,13 +195,14 @@ function aUnderlayHide(target) {
     });
 }
 
-function aContentShow(target) {
+function aContentShow(target, callback) {
     anime({
         targets: target.style,
         opacity: ['0', '1'],
         duration: 200,
         autoplay: true,
-        easing: 'easeInQuad'
+        easing: 'easeInQuad',
+        complete: callback
     });
 }
 
