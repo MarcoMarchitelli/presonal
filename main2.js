@@ -137,6 +137,7 @@ function DeselectLast(callback) {
     //lastSelectedGroup.button.style.pointerEvents = "auto";
 
     lastSelectedGroup.selectionStatus.value = false;
+    lastSelectedGroup.button.style.fontWeight = "normal";
 
     function response() {
         lastSelectedGroup.content.style.display = "none";
@@ -155,6 +156,7 @@ function Select(contentGroup) {
     //contentGroup.button.style.pointerEvents = "none";
 
     contentGroup.selectionStatus.value = true;
+    contentGroup.button.style.fontWeight = "bold";
 
     lastSelectedGroup = contentGroup;
 }
@@ -169,6 +171,7 @@ function InstantSelect(contentGroup) {
 
     //disattiva button
     contentGroup.button.style.pointerEvents = "none";
+    contentGroup.button.style.fontWeight = "bold";
 
     contentGroup.selectionStatus.value = true;
 

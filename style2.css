@@ -23,7 +23,7 @@
         color: var(--textCol);
         
         font-family: 'Zen Maru Gothic', Verdana, sans-serif;
-        max-width: 1200px;
+        max-width: 1100px;
         margin: auto;
         text-align: center;
     }
@@ -52,10 +52,9 @@
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        justify-items: center;
-        align-items: start;
-        margin: auto;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(min( 250px, 100% ), 1fr));
+        grid-template-rows: repeat(max-content);
         row-gap: 30px;
     }
 
@@ -64,6 +63,7 @@
         margin: auto;
         border-radius: 15px;
         height: 200px;
+        width: 252px;
 
         transition: .5s transform;
     }
@@ -98,6 +98,23 @@
     }
 
 /*category*/
+    .subCategoryTitle {
+        font-size: x-large;
+        letter-spacing: 3px;
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    .subCategoryTitleUnderlay {
+        position: relative;
+        margin: auto;
+        height: 2px;
+        top: -3px;
+        background-color: var(--textCol);
+        border-radius: 15px;
+    }
+
     .categoryButton {
         cursor: pointer;
         user-select: none;
@@ -132,10 +149,10 @@
         animation-iteration-count: 1;
     }
 
-.icon {
-    height: 30px;
-    filter: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(2881%) hue-rotate(314deg) brightness(90%) contrast(89%);
-}
+    .icon {
+       height: 30px;
+        filter: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(2881%) hue-rotate(314deg) brightness(90%) contrast(89%);
+    }
 
 /*animations*/
     @keyframes cBtnEnter {
