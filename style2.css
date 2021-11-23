@@ -13,7 +13,6 @@
         height: 2px; 
         max-width: 225px;
         margin: auto; 
-        margin-top: 5px;
     }
 
 /*overrides*/
@@ -30,7 +29,6 @@
 
     .header {
         font-size: 50px; 
-        margin-top: 25px; 
         letter-spacing: 5px;
     }
 
@@ -56,6 +54,23 @@
         grid-template-columns: repeat(auto-fill, minmax(min( 250px, 100% ), 1fr));
         grid-template-rows: repeat(max-content);
         row-gap: 30px;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .roundedCorners {
+        border-radius: 15px;
+    }
+
+/*jobs*/
+    .jobTitle {
+        font-size: xx-large;
     }
 
 /*project*/
