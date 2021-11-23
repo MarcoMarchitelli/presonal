@@ -6,223 +6,380 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deirin</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <title>Marco Marchitelli</title>
+    <link rel="stylesheet" href="style2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
 </head>
 
 <body>
-    <a href="index2.html" style="position: fixed; top:0; left: 0; bottom: auto; right: auto;">elegant</a>
-
-    <div id="mainBlock">
-
-        <div id="titleBlock">
-            <div id="deirinButton" class="bButton">
-                <span class="buttonText tPink tSize5 sButton" id="deirinText">
-                    Deirin
-                </span>
-                <span class="buttonUnderlay tDarkPink tSize5" id="deirinUnderlay">
-                    Deirin
-                </span>
-            </div>
-            <div>
-                <span class="tSize1-5">making</span>
-                <span class="bButton" id="stuffButton">
-                    <span class="buttonText tGreen tSize3 sButton">stuff</span>
-                    <span class="buttonUnderlay tDarkGreen tSize3">stuff</span>
-                </span>
-                <span class="tSize1-5">with modern</span>
-                <span class="bButton">
-                    <span class="buttonText tOrange tSize3 sButton">tools</span>
-                    <span class="buttonUnderlay tDarkOrange tSize3">tools</span>
-                </span>
-            </div>
+    <header class="header">
+        <div style="font-weight: 500; margin-bottom: -20px;">
+            Marco
         </div>
-
-        <div id="stuffList" class="hidden">
-            <div id="games">
-                <div id="gamesButton" class="bButton">
-                    <span class="buttonText tGreen tSize3 sButton">
-                        Games
-                    </span>
-                    <span class="buttonUnderlay tDarkGreen tSize3">
-                        Games
-                    </span>
-                </div>
-                <div id="gamesList" class="accordionElem" style="font-weight: 200;">
-                    <br>
-                    <div class="flexLeft">
-                        <div class="tNormalFont">
-                            October
-                            <br>
-                            2nd - 5th
-                            <br>
-                            2021
-                        </div>
-                        <div id="itWasDesert">
-                            <span>
-                                <span>
-                                    IT WAS
-                                </span>
-                                <br>
-                                <span class="tSize1-5">
-                                    DESERT
-                                </span>
-                            </span>
-                        </div>
-                        <div style="margin-left: 20px; max-width: 250px;">
-                            <div class="tNormalFont">
-                                did everything except game design.
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="flexRight">
-                        <div style="margin-right: 20px; max-width: 250px;">
-                            <div class="tNormalFont">
-                                did everything except game design, logo and icons.
-                            </div>
-                        </div>
-                        <div>
-                            <img src="Resources/pngs/logo_doog.png" id="doog">
-                        </div>
-                        <div style="margin-left: 20px;">
-                            <div class="tNormalFont">
-                                October
-                                <br>
-                                3rd - 6th
-                                <br>
-                                2020
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="flexLeft">
-                        <div style="font-size:large;">
-                            October
-                            <br>
-                            2nd - 5th
-                            <br>
-                            2021
-                        </div>
-                        <div id="itWasDesert">
-                            <span>
-                                <span>
-                                    IT WAS
-                                </span>
-                                <br>
-                                <span class="tSize1-5">
-                                    DESERT
-                                </span>
-                            </span>
-                        </div>
-                        <div style="margin-left: 20px; max-width: 250px;">
-                            <div style="font-size:large;">
-                                did everything except game design.
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="flexRight">
-                        <div style="font-size:large; margin-right: 20px; max-width: 250px;">
-                            did everything except game design, logo and icons.
-                        </div>
-                        <div id="doog">
-                            <img src="Resources/pngs/logo_doog.png" style="margin-top: -61px;">
-                        </div>
-                        <div style="font-size:large; margin-left: 20px;">
-                            October
-                            <br>
-                            3rd - 6th
-                            <br>
-                            2020
-                        </div>
-                    </div>
-                    <br>
-                    <div class="flexLeft">
-                        <div style="font-size:large;">
-                            October
-                            <br>
-                            2nd - 5th
-                            <br>
-                            2021
-                        </div>
-                        <div id="itWasDesert">
-                            <span>
-                                <span>
-                                    IT WAS
-                                </span>
-                                <br>
-                                <span class="tSize1-5">
-                                    DESERT
-                                </span>
-                            </span>
-                        </div>
-                        <div style="margin-left: 20px; max-width: 250px;">
-                            <div style="font-size:large;">
-                                did everything except game design.
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="flexRight">
-                        <div style="font-size:large; margin-right: 20px; max-width: 250px;">
-                            did everything except game design, logo and icons.
-                        </div>
-                        <div id="doog">
-                            <img src="Resources/pngs/logo_doog.png" style="margin-top: -61px;">
-                        </div>
-                        <div style="font-size:large; margin-left: 20px;">
-                            October
-                            <br>
-                            3rd - 6th
-                            <br>
-                            2020
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="shaders" class="mTop1em">
-                <div id="shadersButton" class="accordion bButton">
-                    <span class="buttonText tGreen tSize3 sButton">
-                        Shaders
-                    </span>
-                    <span class="buttonUnderlay tDarkGreen tSize3">
-                        Shaders
-                    </span>
-                </div>
-                <div class="accordionElem">
-                    <div class="game">
-                        shader 1
-                    </div>
-                    <div class="game">
-                        shader 2
-                    </div>
-                    <div class="game">
-                        shader 3
-                    </div>
-                    <div class="game">
-                        shader 4
-                    </div>
-                </div>
-            </div>
+        <div style="letter-spacing: 10px;">
+            Marchitelli
         </div>
+    </header>
 
-        <div class="socialBotLine">
-            <div class="socialContainer">
-                <a href="https://twitter.com/_Deirin" target="_blank" alt="Twitter">
-                    <img src="Resources/pngs/logo_twitter.png" class="logoLinkImg">
-                </a>
-            </div>
-            <div class="socialContainer">
-                <a href="https://deirin.itch.io/" target="_blank" alt="Itch">
-                    <img src="Resources/pngs/logo_itch.png" class="logoLinkImg">
-                </a>
-            </div>
+    <div id="titleLine"></div>
+
+    <div class="flexCenter" style="margin-top: 15px;">
+        <a href="https://twitter.com/_Deirin" alt="Twitter" target="_blank">
+            <img class="icon" src="Resources/pngs/logo_twitter_white.png">
+        </a>
+        <a href="https://deirin.itch.io/" alt="Itch" target="_blank">
+            <img class="icon" src="Resources/pngs/logo_itch.svg">
+        </a>
+        <a href="https://www.linkedin.com/in/marco-marchitelli/" alt="LinkedIn" target="_blank">
+            <img  class="icon" src="Resources/pngs/logo_linkedin.png">
+        </a>
+    </div>
+
+    <br>
+
+    <div class="flexCenter" style="font-size: x-large;">
+        <div id="gamesButton" class="categoryButton categoryText" > <!--style="width: 71.75px;"-->
+                Games
+            <div class="categoryTextUnderlay"></div>
+        </div>
+        <div id="shadersButton" class="categoryButton categoryText"> <!--style="width: 85.86px;"-->
+                Shaders
+            <div class="categoryTextUnderlay"></div>
+        </div>
+        <div id="toolsButton" class="categoryButton categoryText"> <!--style="width: 54.83px;"-->
+                Jobs
+            <div class="categoryTextUnderlay"></div>
+        </div>
+        <div id="aboutButton" class="categoryButton categoryText"> <!--style="width: 63.75px;"-->
+                About
+            <div class="categoryTextUnderlay"></div>
         </div>
     </div>
-    <script src="main.js"></script>
+
+    <br>
+
+    <div style="margin-bottom: 150px;">
+        <div id="gamesGrid" class="opacity0 displayNone">
+            <div class="subCategoryTitle">
+                Jams
+                <div class="subCategoryTitleUnderlay"></div>
+            </div>           
+            <div class="grid">
+                <div>
+                    <a href="https://andrea-teruzzi.itch.io/itwasdesert-ld49" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_itwasdesert.png">
+                    </a>
+
+                    <a class="projTitle link" href="https://andrea-teruzzi.itch.io/itwasdesert-ld49" target="_blank">
+                        <div>It Was Desert</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        Puzzle game for 
+                        <a href="https://ldjam.com/events/ludum-dare/49/it-was-desert" target="_blank" class="link" >Ludum Dare 49</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://andrea-teruzzi.itch.io/drillspaceidle" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_drillspaceidle.png">
+                    </a>  
+                    <a class="projTitle link" href="https://andrea-teruzzi.itch.io/drillspaceidle" target="_blank">
+                        <div >Drill Space Idle</div>
+                    </a> 
+                    <div class="projDescription">
+                        Idle game for 
+                        <a href="https://ldjam.com/events/ludum-dare/48/drill-space-idle" target="_blank" class="link" >Ludum Dare 48</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://andrea-teruzzi.itch.io/doog" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_doog.png">
+                    </a>
+                    <a class="projTitle link" href="https://andrea-teruzzi.itch.io/doog" target="_blank">
+                        <div >DooG</div>
+                    </a>
+                    <div class="projDescription">
+                        Puzzle game for 
+                        <a href="https://ldjam.com/events/ludum-dare/47/doooog" target="_blank" class="link" >Ludum Dare 47</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://andrea-teruzzi.itch.io/ld46" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_eggbertii.png" class="projImage">
+                    </a>
+                    <a class="projTitle link" href="https://andrea-teruzzi.itch.io/ld46" target="_blank">
+                        <div >Eggbert II</div>
+                    </a>
+                    <div class="projDescription">
+                        Puzzle game for 
+                        <a href="https://ldjam.com/events/ludum-dare/46/ludum-dare-46-game-wannabe" target="_blank" class="link" >Ludum Dare 46</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://andrea-teruzzi.itch.io/ld45atmm" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_v0id.png">
+                    </a>
+                    <a class="projTitle link" href="https://andrea-teruzzi.itch.io/ld45atmm" target="_blank">
+                        <div >V0iD</div>
+                    </a>
+                    <div class="projDescription">
+                        Small interactive experience for
+                        <a href="https://ldjam.com/events/ludum-dare/45/v0id" target="_blank" class="link" >Ludum Dare 45</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://andreaancona.itch.io/slime-workout" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_slimeworkout.png">
+                    </a>
+                    <a class="projTitle link" href="https://andreaancona.itch.io/slime-workout" target="_blank">
+                        <div >Slime Workout</div>
+                    </a>
+                    <div class="projDescription">
+                        Puzzle game for the <br>
+                        <a class="link" href="https://globalgamejam.org/" target="_blank">
+                            Global Game Jam
+                        </a>
+                        2021
+                    </div>
+                </div>
+                <div>
+                    <a href="https://itch.io/jam/mix-and-game-jam-2020/rate/821760" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_alienpet.png">
+                    </a>
+                    <a class="projTitle link" href="https://itch.io/jam/mix-and-game-jam-2020/rate/821760" target="_blank">
+                        <div >Alien Pet</div>
+                    </a>
+                    <div class="projDescription">
+                        Puzzle game for the <br>
+                        <a class="link" href="https://itch.io/jam/mix-and-game-jam-2020" target="_blank">
+                            Mix and Game Jam 2020
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://andreaancona.itch.io/sur-the-music" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_survivethemusic.png">
+                    </a>
+                    <a class="projTitle link" href="https://andreaancona.itch.io/sur-the-music" target="_blank">
+                        <div >Survive The Music</div>
+                    </a>
+                    <div class="projDescription">
+                        Puzzle game for the <br>
+                        <a class="link" href="https://globalgamejam.org/" target="_blank">
+                            Global Game Jam
+                        </a>
+                        2020
+                    </div>
+                </div>
+                <div>
+                    <a href="https://andrea-teruzzi.itch.io/humus" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_humus.jpg">
+                    </a>
+                    <a class="projTitle link" href="https://andrea-teruzzi.itch.io/humus" target="_blank">
+                        <div >Humus</div>
+                    </a>
+                    <div class="projDescription">
+                        Idle game for the <br>
+                        <a class="link" href="https://itch.io/jam/gmtk-2021" target="_blank">
+                            GMTK Game Jam 2021
+                        </a>          
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            <div class="subCategoryTitle">
+                School
+                <div class="subCategoryTitleUnderlay"></div>
+            </div>           
+            <div class="grid">
+                <div>
+                    <a href="https://eventhorizonschool.itch.io/sweet-rage" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_sweetrage2.png">
+                    </a>
+
+                    <a class="projTitle link" href="https://eventhorizonschool.itch.io/sweet-rage" target="_blank">
+                        <div>Sweet Rage</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        Modular Tower Defence <br> 3rd year at <br>
+                        <a href="https://www.eventhorizonschool.com" target="_blank" class="link" >Event Horizon School</a> 
+                    </div>
+                </div>
+                <div>
+                    <div style="overflow: hidden; height: 200px;" class="projImage">
+                        <a href="https://eventhorizonschool.itch.io/sweet-rage" target="_blank">
+                            <img src="Resources/pngs/thumbnail_bullethack.gif" style="height: 200px; margin: 0 0 0 -20%;">
+                        </a>
+                    </div> 
+
+                    <a class="projTitle link" href="https://eventhorizonschool.itch.io/sweet-rage" target="_blank">
+                        <div>Bullet Hack</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        Tween-Stick Shooter <br> 2nd year at <br>
+                        <a href="https://www.eventhorizonschool.com" target="_blank" class="link" >Event Horizon School</a> 
+                    </div>
+                </div>
+                <div>
+                    <div style="overflow: hidden; height: 200px;" class="projImage">
+                        <a href="https://deirin.itch.io/god-hunt" target="_blank">
+                            <img src="Resources/pngs/thumbnail_godhunt.jpg" style="height: 200px; margin: 0 0 0 -25%;">
+                        </a>
+                    </div> 
+                    
+
+                    <a class="projTitle link" href="https://deirin.itch.io/god-hunt" target="_blank">
+                        <div>God Hunt</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        2.5D Rogue Like <br> 2nd year at <br>
+                        <a href="https://www.eventhorizonschool.com" target="_blank" class="link" >Event Horizon School</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://eventhorizonschool.itch.io/quest-luminis" target="_blank">
+                        <img class="projImage" src="Resources/pngs/thumbnail_questluminis.png">
+                    </a>
+
+                    <a class="projTitle link" href="https://eventhorizonschool.itch.io/quest-luminis" target="_blank">
+                        <div>Quest Luminis</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        Original Board Game <br> 1st year at <br>
+                        <a href="https://www.eventhorizonschool.com" target="_blank" class="link" >Event Horizon School</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+        <div id="shadersGrid" class="opacity0 displayNone" style="max-width: 825px; margin: auto;">
+            <div class="subCategoryTitle">
+                ShaderToy
+                <div class="subCategoryTitleUnderlay"></div>
+            </div> 
+            <div class="grid">
+                <div>
+                    <a href="https://www.shadertoy.com/view/WlsSRB" target="_blank">
+                        <div style="overflow: hidden; width: 252px;" class="projImage">
+                            <video class="mp4" height="200px" style="margin-left: -20%; margin-right: auto;"  muted loop>
+                                <source src="Resources/mp4/mp4_timestable.mp4" type="video/mp4">
+                            </video>
+                        </div>    
+                    </a>
+
+                    <a class="projTitle link" href="https://www.shadertoy.com/view/WlsSRB" target="_blank">
+                        <div>Times Table</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        HLSL on  
+                        <a href="https://www.shadertoy.com/profile/?show=shaders" target="_blank" class="link" >Shadertoy</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.shadertoy.com/view/WlfyRX" target="_blank">
+                        <div style="overflow: hidden; width: 252px;" class="projImage">
+                            <video class="mp4" height="200px" style="margin-left: -20%; margin-right: auto;"  muted loop>
+                                <source src="Resources/mp4/mp4_mathanimation1.mp4" type="video/mp4">
+                            </video>
+                        </div>        
+                    </a>
+
+                    <a class="projTitle link" href="https://www.shadertoy.com/view/WlfyRX" target="_blank">
+                        <div>Math Animation 1</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        HLSL on  
+                        <a href="https://www.shadertoy.com/profile/?show=shaders" target="_blank" class="link" >Shadertoy</a> 
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.shadertoy.com/view/WtjfWm" target="_blank">
+                        <div style="overflow: hidden; width: 252px;" class="projImage">
+                            <video class="mp4" height="200px" style="margin-left: -20%; margin-right: auto;"  muted loop>
+                                <source src="Resources/mp4/mp4_mathanimation2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+
+                    <a class="projTitle link" href="https://www.shadertoy.com/view/WtjfWm" target="_blank">
+                        <div>Math Animation 2</div>
+                    </a>
+                    
+                    <div class="projDescription">
+                        HLSL on  
+                        <a href="https://www.shadertoy.com/profile/?show=shaders" target="_blank" class="link" >Shadertoy</a> 
+                    </div>
+                </div>
+            </div>      
+        </div>
+    
+        <div id="toolsGrid" class="opacity0 displayNone">
+            <div style="max-width: 800px; margin: auto;">
+                <div class="left">
+                    <a href="https://www.tinybullstudios.com/" target="_blank">
+                        <img src="Resources/pngs/logo_tinybull.png" alt="TinyBull" style="float: right; margin-right: auto;">
+                    </a>
+                    <a href="https://www.tinybullstudios.com/" target="_blank" class="link jobTitle">Tiny Bull Studios</a>
+                    <div class="projTitle">
+                        as a Technical Artist and Game Programmer
+                    </div>
+                    <br>
+                    <div>Worked on an internal PC/Switch project and a B2B mobile game all on 
+                        <a href="https://unity.com/" target="_blank" class="link">Unity</a></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="right">
+                    <a href="https://play.google.com/store/apps/details?id=it.forge.reply.adlumita&hl=it&gl=US" target="_blank">
+                        <img src="Resources/pngs/logo_reply.png" alt="ITALY" style="float: left; margin-left: auto;">
+                    </a>
+                    <div>
+                        <a href="https://www.reply.com/reply-game-studios/en/" target="_blank" class="link jobTitle">Reply Game Studios</a>
+                    </div>             
+                    <div class="projTitle">
+                        as a Technical Artist and Game Programmer
+                    </div>
+                    <br>
+                    <div>Worked on 
+                        <a href="https://play.google.com/store/apps/details?id=it.forge.reply.adlumita&hl=it&gl=US" target="_blank" class="link">ITALY, land of wonders</a>
+                        made with  
+                        <a href="https://unity.com/" target="_blank" class="link">Unity</a>
+                    </div>                     
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="left">
+                    <a href="https://www.anothereality.io/" target="_blank">
+                        <img src="Resources/pngs/logo_anothereality.png" alt="AnotheReality" style="float: right; margin-right: auto;">
+                    </a>
+                    <a href="https://www.anothereality.io/" target="_blank" class="link jobTitle">AnotheReality</a>
+                    <div class="projTitle">
+                        as a Unity Generalist
+                    </div>
+                    <br>
+                    <div>Worked on a B2B mobile game for ENI, made with
+                        <a href="https://unity.com/" target="_blank" class="link">Unity</a></div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="aboutGrid" class="opacity0 displayNone">
+            <div>
+                CIAO SONO MARCO CIAO
+            </div>
+        </div>
+    </div>   
+
+    <script src="main2.js"></script>
 </body>
 
 </html>
