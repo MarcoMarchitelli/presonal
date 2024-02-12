@@ -101,7 +101,7 @@ function Init() {
         _ => GroupClick(aboutGroup)
     );
 
-    InstantSelect(gamesGroup);
+    InstantSelect(aboutGroup);
 }
 
 function GroupClick(contentGroup) {
