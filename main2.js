@@ -101,6 +101,12 @@ function Init() {
         _ => GroupClick(aboutGroup)
     );
 
+    //link to Jobs tab in the About text
+    document.getElementById("jobsLink").addEventListener(
+        "click",
+        _ => GroupClick(toolsGroup)
+    );
+
     InstantSelect(aboutGroup);
 }
 
