@@ -104,6 +104,13 @@
         font-weight: bold;
     }
 
+    .jobLink {
+        text-decoration: none;
+        color: var(--linkCol);
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
     .linkUnderlay {
         width: 50%;
         height: 10px;
