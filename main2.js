@@ -1,7 +1,7 @@
 window.onload = LoadHandler;
 
 function LoadHandler() {
-    InitVars();
+    Init();
 }
 
 let games_button;
@@ -40,10 +40,6 @@ class contentGroup {
         this.content = content;
         this.selectionStatus = { value: false };
     }
-}
-
-function InitVars() {
-    Init();
 }
 
 function Init() {
